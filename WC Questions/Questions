@@ -21,8 +21,8 @@ Q5:- Create an HTML page that will divide a page into two horizontal fragments u
 Q6:- Write an HTML code to process the placement registration form which accepts the student's details like name, address, email-id, contact number, date of birth, percentage, branch (must be selected using radio button), and technology-preferred (using the checkbox). 
 Write the JavaScript code to validate the following.
 i. Valid email id ("@" and".")
-ii. All the fields must be filled before submission of the form
-Percentage validation is minimum first class (=>60%)
+ii. All the fields must be filled before submission of the form 
+iii. Percentage validation is minimum first class (=>60%)
 
 
 Q13. Explain the "Window "object of JavaScript DOM. Write JavaScript code to change the web page's background color automatically after every five seconds.
