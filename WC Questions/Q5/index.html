@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+    <title>Horizontal Split Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .split-container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .left-panel, .right-panel {
+            flex: 1;
+            height: 100%;
+            overflow: auto;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .left-panel {
+            background-color: #3498db;
+        }
+
+        .right-panel {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="split-container">
+        <div class="left-panel">
+            <h1>Left Wing</h1>
+            <p>Left-wing economics policies involve reducing income equality, increasing tax rates for the wealthy, and government spending on social programs and infrastructure.</p>
+        </div>
+        <div class="right-panel">
+            <h1>Right Wing</h1>
+            <p>Right-wing ideologies believe that the best outcome for society is delivered when individual rights and civil liberties are paramount with limited involvement of the government.</p>
+        </div>
+    </div>
+</body>
+</html>
