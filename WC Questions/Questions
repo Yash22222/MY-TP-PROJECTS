@@ -1,1 +1,28 @@
+Q1:- Write an external stylesheet and link it with HTML code. The stylesheet should include the following.
+i. The web page will have the background image "img1.jpg"
+ii. The table headings will have a background color.
+iii. Background colors of alternate paragraphs are different.
+iv. The hyperlinks on the web page will not have an underline.
 
+
+Q2:- 2. Write code to process online Alumni information of your college. Create forms to get name, address, date of birth, and email id. Use checkboxes for taking hobbies and radio buttons for selecting branches. 
+Write JavaScript code to validate. 
+i. User has filled all fields before form submission. 
+ii. Valid email-id (with '@'and '.')
+iii. Age validation using DOB (>=22 years)
+
+
+Q3:- Write HTML 5 code for embedding the audio and video elements in the web page.
+
+
+Q5:- Create an HTML page that will divide a page into two horizontal fragments using a frameset tag, each frame should have different background color & different headings
+
+
+Q6:- Write an HTML code to process the placement registration form which accepts the student's details like name, address, email-id, contact number, date of birth, percentage, branch (must be selected using radio button), and technology-preferred (using the checkbox). 
+Write the JavaScript code to validate the following.
+i. Valid email id ("@" and".")
+ii. All the fields must be filled before submission of the form
+Percentage validation is minimum first class (=>60%)
+
+
+Q13. Explain the "Window "object of JavaScript DOM. Write JavaScript code to change the web page's background color automatically after every five seconds.
