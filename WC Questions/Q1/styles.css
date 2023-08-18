@@ -1,0 +1,27 @@
+/* styles.css */
+
+/* Set background image for the entire webpage */
+body {
+    background-image: url('https://shorturl.at/eiX24');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Style table headings with a background color */
+th {
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style alternate paragraphs with different background colors */
+p:nth-child(even) {
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+/* Remove underlines from hyperlinks */
+a {
+    text-decoration: none;
+    color: red;
+}
