@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+    <title>Alumni Information</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alumni Information Form</h1>
+    <form id="alumniForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required><br>
+        
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" required><br>
+        
+        <label for="hobbies">Hobbies:</label>
+        <input type="checkbox" id="hobby1" value="Reading">Reading
+        <input type="checkbox" id="hobby2" value="Sports">Sports
+        <input type="checkbox" id="hobby3" value="Music">Music<br>
+        
+        <label>Branch:</label>
+        <input type="radio" name="branch" value="CSE">CSE
+        <input type="radio" name="branch" value="ECE">ECE
+        <input type="radio" name="branch" value="Mechanical">Mechanical<br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <p class="error" id="errorText"></p>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var address = document.getElementById("address").value;
+            var dob = new Date(document.getElementById("dob").value);
+            var email = document.getElementById("email").value;
+            var hobbies = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            var branchSelected = document.querySelector('input[name="branch"]:checked');
+
+            var errorText = document.getElementById("errorText");
+            errorText.innerHTML = "";
+
+            if (name === "" || address === "" || dob === "" || email === "" || hobbies === 0 || !branchSelected) {
+                errorText.innerHTML = "Please fill in all fields.";
+                return false;
+            }
+
+            var age = calculateAge(dob);
+            if (age < 22) {
+                errorText.innerHTML = "Age must be 22 or older.";
+                return false;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                errorText.innerHTML = "Please enter a valid email address.";
+                return false;
+            }
+
+            return true;
+        }
+
+        function calculateAge(dob) {
+            var currentDate = new Date();
+            var birthDate = new Date(dob);
+            var age = currentDate.getFullYear() - birthDate.getFullYear();
+            var monthDiff = currentDate.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+    </script>
+</body>
+</html>
