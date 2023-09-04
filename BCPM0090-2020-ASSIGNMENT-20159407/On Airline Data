@@ -1,1 +1,31 @@
+Measuring satisfaction of customers is an important element for modern businesses as it can significantly contribute to an effort to continue improve in processes and services.
 
+In this dataset you have 24 columns
+
+There are some Variables with values in the range 
+1-5 (Minimum satisfaction 1 / Maximum satisfaction 5)
+
+1. Index
+2. Gender
+3. customer_type
+4. age
+5. type_of_travel
+6. customer_class
+7. flight_distance (Km)
+8. inflight_wifi_service
+9. departure_arrival_time_convenient
+10. ease_of_online_booking
+11. gate_location
+12. food_and_drink
+13. online_boarding
+14. seat_comfort
+15. inflight_entertainment
+16. onboard_service
+17. leg_room_service
+18. baggage_handling
+19. checkin_service
+20. inflight_service
+21. cleanliness
+22. departure_delay_in_minutes
+23. arrival_delay_in_minutes
+24. satisfaction
