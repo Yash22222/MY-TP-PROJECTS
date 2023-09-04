@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-    <title>Placement Registration</title>
+<link rel="stylesheet" href="styles.css">    
+<title>Placement Registration</title>
     <style>
         .error {
             color: red;
@@ -33,14 +33,18 @@
         <input type="number" id="percentage" required><br>
         
         <label>Branch:</label>
+        <input type="radio" name="branch" value="AIDS">AIDS
         <input type="radio" name="branch" value="CSE">CSE
-        <input type="radio" name="branch" value="ECE">ECE
+        <input type="radio" name="branch" value="IOT">IOT
+        <input type="radio" name="branch" value="EXTC">EXTC
         <input type="radio" name="branch" value="Mechanical">Mechanical<br>
         
         <label>Technology Preferred:</label>
-        <input type="checkbox" name="tech" value="Java">Java
-        <input type="checkbox" name="tech" value="Python">Python
-        <input type="checkbox" name="tech" value="C++">C++<br>
+        <input type="checkbox" name="tech" value="Ruby">Ruby
+        <input type="checkbox" name="tech" value="C#">C#
+        <input type="checkbox" name="tech" value="Go">Go
+        <input type="checkbox" name="tech" value="Perl">Perl
+        <input type="checkbox" name="tech" value="Php">PHP<br>
         
         <input type="submit" value="Submit">
     </form>
@@ -61,18 +65,21 @@
             var errorText = document.getElementById("errorText");
             errorText.innerHTML = "";
 
-            if (name === "" || address === "" || email === "" || contact === "" || dob === "" || isNaN(percentage) || !branchSelected || techSelected === 0) {
-                errorText.innerHTML = "Please fill in all fields.";
+            // Regular expression to validate a phone number (10 digits)
+            var phoneRegex = /^\d{10}$/;
+
+            if (name === "" || address === "" || email === "" || !phoneRegex.test(contact) || dob === "" || isNaN(percentage) || !branchSelected || techSelected === 0) {
+                errorText.innerHTML = "Please Fill in All Fields or Provide a Valid Contact Number.";
                 return false;
             }
 
             if (!email.includes("@") || !email.includes(".")) {
-                errorText.innerHTML = "Please enter a valid email address.";
+                errorText.innerHTML = "Please Enter a Valid E-Mail Address.";
                 return false;
             }
 
             if (percentage < 60) {
-                errorText.innerHTML = "Percentage must be minimum first class (>= 60%).";
+                errorText.innerHTML = "Percentage Must be Minimum First Class (>= 90%).";
                 return false;
             }
 
